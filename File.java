@@ -14,7 +14,6 @@ public class File
             Scanner scanner = new Scanner(reader);
             HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
             
-            System.out.println(reader.getEncoding());
             while (scanner.hasNext()){
                 String word = scanner.nextLine();
                 String key = word.substring(0,3);
