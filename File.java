@@ -12,9 +12,16 @@ public class File
         try {
             FileReader reader = new FileReader("c:\\Temp\\inputData20191007.txt");
             Scanner scanner = new Scanner(reader);
+            HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
+            
+            while (scanner.hasNext()){
+                String word = scanner.nextLine();
+                hashmap.put(word.substring(0,4), word.substring(5, word.length()));
+                
+            }
         }
         catch(IOException e){
-            
+            System.out.println("경로 오류!");
         }
     }
 }
