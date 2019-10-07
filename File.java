@@ -16,9 +16,16 @@ public class File
             
             while (scanner.hasNext()){
                 String word = scanner.nextLine();
-                hashmap.put(word.substring(0,4), word.substring(5, word.length()));
-                
+                String key = word.substring(0,4);
+                String temp = word.substring(5, word.length());
+                Integer value = Integer.parseInt(temp);
+                hashmap.put(key, value);
             }
+            Set<String> keys = hashmap.keySet();
+            Iterator <String> itr = keys.iterator();
+            
+            
+            
         }
         catch(IOException e){
             System.out.println("경로 오류!");
