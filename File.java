@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
 /**
- * 여기에 File 클래스 설명을 작성하십시오.
+ * 파일을 읽어들여서 파일에 있는 성적의 총점과 평균을 구해서 출력하는 File 클래스
  * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * @author (2018315017 임민택, 2017315056 이토아야카) 
+ * @version (2019.10.07)
  */
 public class File
 {
