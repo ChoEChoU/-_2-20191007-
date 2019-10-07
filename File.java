@@ -14,18 +14,32 @@ public class File
             Scanner scanner = new Scanner(reader);
             HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
             
+            System.out.println(reader.getEncoding());
             while (scanner.hasNext()){
                 String word = scanner.nextLine();
-                String key = word.substring(0,4);
-                String temp = word.substring(5, word.length());
-                Integer value = Integer.parseInt(temp);
+                String key = word.substring(0,3);
+                String temp = word.substring(4, word.length());
+                int value = Integer.parseInt(temp);
                 hashmap.put(key, value);
             }
             Set<String> keys = hashmap.keySet();
             Iterator <String> itr = keys.iterator();
             
+            int add = 0;
+            double average = 0.0;
+            int count = 0;
             
+            while (itr.hasNext()){
+                String key = itr.next();
+                int value = hashmap.get(key);
+                add += value;
+                count += 1;
+            }
+            average = add / count;
             
+            System.out.println("------ 계산 결과 ------");
+            System.out.println("총점 : " + add);
+            System.out.println("평균 : " + average);
         }
         catch(IOException e){
             System.out.println("경로 오류!");
